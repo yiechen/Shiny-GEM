@@ -61,6 +61,7 @@ sidebar <- dashboardSidebar(width = 150,
               menuItem('Home', tabName='load_dataset', icon = icon('home'), selected = TRUE),
               menuItem('Documentation', icon = icon('book'), href = 'https://www.donaldmellenbruch.com/post/introducing-shiny-gem/', newtab = TRUE),
               menuItem('Say Hi!', icon = icon('twitter'), href = 'https://twitter.com/dm3ll3n', newtab = TRUE),
+              menuItem('GitHub', icon = icon('github'), href = 'https://github.com/dm3ll3n/Shiny-GEM', newtab = TRUE),
               menuItem('Me', icon = icon('user-o'), href = 'https://www.donaldmellenbruch.com', newtab = TRUE)
   )
 )
