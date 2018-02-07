@@ -24,7 +24,6 @@ ggrepel
 grid
 gridExtra
 GGally
-ggthemes
 lubridate
 anytime
 ```

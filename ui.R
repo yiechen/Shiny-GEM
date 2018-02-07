@@ -22,7 +22,6 @@ library(ggrepel)
 library(grid)
 library(gridExtra)
 library(GGally)
-library(ggthemes)
 library(lubridate)
 library(anytime)
 
