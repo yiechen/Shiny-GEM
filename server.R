@@ -119,7 +119,7 @@ function(input, output, session) {
 
     if (!is.na(ext_i)) {
       if (ext_i > 3) {
-        my$dataset_original <- readRDS(input$userFile$datapath) %>% as.data.table() %>% stringsAsFactors()
+        my$dataset_original <- readRDS(input$userFile$datapath) %>% as.data.table() # %>% stringsAsFactors()
       } else {
         read_FUN <- if (ext_i == 1) { read_csv } else { read_excel }
 
@@ -341,8 +341,9 @@ function(input, output, session) {
                   'Month'='^0*([1-9]|1[0-2])$',
                   'Day'='^0*([0-9]|[12][0-9]|3[01])$',
                   'Day of Year'='^0*([0-9]|[1-8][0-9]|9[0-9]|[12][0-9]{2}|3[0-5][0-9]|36[0-6])$',
-                  'ymd_hms'='^\\d{4}.*\\d{1,2}.*\\d{1,2}( .+|T.+Z)$',
+                  'ymd_hms'='^\\d{4}.*\\d{1,2}.*\\d{1,2}\\s.+$',
                   'ymd'='^\\d{4}.*\\d{1,2}.*\\d{1,2}',
+                  'mdy_hms'='^\\d{1,2}.*\\d{1,2}.*\\d{4}\\s.+$',
                   'mdy'='^\\d{1,2}.*\\d{1,2}.*\\d{4}',
                   'Year-Month'='^\\d{4}.*\\d{1,2}$',
                   'Hour:Minute'='^\\d{1,2}:\\d{2}$',
